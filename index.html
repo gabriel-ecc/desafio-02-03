@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles/styles.css">
     <title>Electric Cars</title>
 </head>
 <body class="contenedor">
@@ -20,7 +20,7 @@
         <div class="header-sector">
             <i class="fa-solid fa-bars fa-2xl hide-menu"></i>
             <nav class="nav">
-                <ul>
+                <ul class="lista">
                     <li class="action-1"><a href="#">Inicio</a></li>
                     <li class="action-1"><a href="#">Catalogo</a></li>
                     <li class="action-1"><a href="#">Ofertas</a></li>
@@ -29,17 +29,17 @@
             </nav>
         </div>
     </header>
+    <section class="order-by">
+        <p class="order-by-texto">
+            Ordenar Por:
+        </p>
+        <select class="order-by-selector">
+            <option value="valor1">Precio</option>
+            <option value="valor2">Más Recientes</option>
+            <option value="valor3">Orden Alfavético</option>
+          </select>
+    </section>
     <main class="main">
-        <section class="order-by">
-            <p class="order-by-texto">
-                Ordenar Por:
-            </p>
-            <select class="order-by-selector">
-                <option value="valor1">Precio</option>
-                <option value="valor2">Más Recientes</option>
-                <option value="valor3">Orden Alfavético</option>
-              </select>
-        </section>
         <section class="productos">
             <div class="card">
                 <img src="assets/imgs/electric-car.png" alt="model-1" class="imagen-auto">
