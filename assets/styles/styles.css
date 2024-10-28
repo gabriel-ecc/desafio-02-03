@@ -61,6 +61,7 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
+    gap: 2rem;
 }
 
 .card{
@@ -73,13 +74,17 @@
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-.fuera-pagina{
+.fuera-pagina1{
+    display: none;
+}
+
+.fuera-pagina2{
     display: none;
 }
 
 .card img{
-    width: 300px;
-    height: 250px;
+    width: 150px;
+    height: 125px;
 }
 
 .card button{
@@ -143,8 +148,62 @@
     grid-template-rows: 10vh 10vh 70vh 10vh;
 }
 
+@media(width > 576px){
+    .contenedor{
+        grid-template-areas: 
+        "header header"
+        "order-by main"
+        "footer footer";
+        grid-template-columns: 20vw 80vw;
+        grid-template-rows: 10vh 75vh 15vh;
+    }
 
-@media (width > 576px){
+    .fa-bars{
+        display: none;
+    }
+
+    .nav{
+        display: inline-flex;
+    }
+
+    .nav ul{
+        display: flex;
+        gap: 1rem;
+    }
+
+    li{
+        list-style-type: none;
+    }
+    
+
+    a,ul,li{
+        text-decoration: none;
+    }
+
+    .header{
+        justify-content: space-between;
+        padding: 0 2rem;
+
+    }
+
+    .order-by{
+        justify-content: start;
+        gap: 1.5rem;
+    }
+
+    .order-by select{
+        width: 15vw;
+    }
+
+    .fuera-pagina1{
+        display: inline-flex;
+    }
+
+    
+}
+
+
+@media (width >= 992px){
 
     .contenedor{
         grid-template-areas: 
@@ -152,7 +211,7 @@
         "header main"
         "footer main";
         grid-template-columns: 20vw 80vw;
-        grid-template-rows: 10vh 75vh 15vh;
+        grid-template-rows: 12.5vh 72.5vh 15vh;
     }
 
     .productos{
@@ -161,7 +220,7 @@
         gap: 1rem;
     }
 
-    .fuera-pagina{
+    .fuera-pagina2{
         display: inline-flex;
     }
 
@@ -173,18 +232,13 @@
         padding: 1rem;
     }
 
+    .nav ul{
+        flex-direction: column;
+        gap: 0rem;
+    }
+
     h1{
         font-size: medium;
-    }
-
-    
-
-    .fa-bars{
-        display: none;
-    }
-
-    .nav{
-        display: inline-flex;
     }
 
     .action-1{
@@ -194,17 +248,9 @@
     
     .order-by select{
         width: 75vw;
-        height: 5vh;
     }
     
-    li{
-        list-style-type: none;
-    }
     
-
-    a,ul,li{
-        text-decoration: none;
-    }
 
 
 }
